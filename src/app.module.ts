@@ -6,15 +6,15 @@ import { UsersModule } from './users/users.module';
 @Module({
 	imports: [
 		ConfigModule.forRoot({
-			envFilePath: '.env',
+			envFilePath: `${process.env.NODE_ENV}.env`,
 		}),
 		SequelizeModule.forRoot({
 			dialect: 'postgres',
-			host: 'localhost',
-			port: 5432,
-			username: 'postgres',
-			password: 'root',
-			database: 'bug-free-lamp',
+			host: process.env.POSTGRES_HOST,
+			port: Number(process.env.POSTGRESS_PORT),
+			username: process.env.POSTGRES_USER,
+			password: process.env.POSTGRESS_PASSWORD,
+			database: process.env.POSTGRES_DB,
 			models: [],
 			autoLoadModels: true,
 		}),
