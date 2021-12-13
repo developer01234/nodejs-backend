@@ -3,6 +3,7 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { Body } from '@nestjs/common';
 import { Post } from '@nestjs/common';
 import { Controller } from '@nestjs/common';
+import { Get } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
@@ -10,6 +11,11 @@ export class UsersController {
 
 	@Post()
 	create(@Body() userDto: CreateUserDto) {
-		return this.UsersService.createUser;
+		return this.UsersService.createUser(userDto);
+	}
+
+	@Get()
+	getAll() {
+		return this.UsersService.getUsers();
 	}
 }
