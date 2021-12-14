@@ -9,6 +9,7 @@ import { User } from "./users/models/users.model";
     ConfigModule.forRoot({
       envFilePath: ".env",
     }),
+    // connect DB
     SequelizeModule.forRoot({
       dialect: "postgres",
       host: process.env.POSTGRES_HOST,
