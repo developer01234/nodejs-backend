@@ -11,7 +11,6 @@ import { UserRoles } from "./user-roles.model";
 
 interface RoleCreationAttrs {
   value: string;
-  /*description: string;*/
 }
 
 // create table for DB
@@ -28,9 +27,6 @@ export class Role extends Model<Role, RoleCreationAttrs> {
   @ApiProperty({ example: "ADMIN", description: "user role" })
   @Column({ type: DataType.STRING, unique: true, allowNull: false })
   value: string;
-  /*@ApiProperty({ example: "ADMIN", description: "user role" })
-  @Column({ type: DataType.STRING, allowNull: false })
-  description: string;*/
 
   @BelongsToMany(() => User, () => UserRoles)
   users: User[];

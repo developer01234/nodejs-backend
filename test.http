@@ -1,9 +1,18 @@
 # I use VS CODE extensions Rest Client
 
-GET http://localhost:5000/users
-Content-Type: application/json
+# GET http://localhost:5000/users
+# Content-Type: application/json
 
-{
-	"email": "test1",
-	"password": "test1"
-}
+#{
+#	"email": "test1",
+#	"password": "test1"
+#}
+
+GET http://localhost:5000/roles/ADMIN
+
+#POST http://localhost:5000/roles
+#Content-Type: application/json
+
+#{
+#	"value": "ADMIN"
+#}
