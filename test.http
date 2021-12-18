@@ -1,12 +1,12 @@
 # I use VS CODE extensions Rest Client
 
-GET http://localhost:5000/users
-Content-Type: application/json
+#GET http://localhost:5000/users
+#Content-Type: application/json
 
-{
-	"email": "test2",
-	"password": "test2"
-}
+#{
+#	"email": "test2",
+#	"password": "test2"
+#}
 
 #GET http://localhost:5000/roles/ADMIN
 
@@ -16,3 +16,11 @@ Content-Type: application/json
 #{
 #	"value": "USER"
 #}
+
+POST http://localhost:5000/auth/signup
+Content-Type: application/json
+
+{
+	"email": "example1234@example.com",
+	"password": "12345"
+}
