@@ -1,5 +1,10 @@
 import { UsersService } from "./../users/users.service";
-import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  UnauthorizedException,
+} from "@nestjs/common";
 import { CreateUserDto } from "src/users/dto/create-user.dto";
 import { JwtService } from "@nestjs/jwt";
 import * as bcrypt from "bcryptjs";
@@ -23,8 +28,12 @@ export class AuthService {
       userDto.password,
       user.password
     );
-    if() {}
-    return user;
+    if (user && confirmPassword) {
+      return user;
+    }
+    throw new UnauthorizedException({
+      message: "Invalid email or password",
+    });
   }
 
   async signup(userDto: CreateUserDto) {
