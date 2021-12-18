@@ -15,12 +15,12 @@ export class UsersService {
     // created user
     const user = await this.userRepos.create(dto);
     const role = await this.roleService.getRole("USER");
-    await user.$set("roles", [role.id]);
+    await user.$set("role", [role.id]);
     return user;
   }
   async getUsers() {
     // Find all users
-    const users = await this.userRepos.findAll();
+    const users = await this.userRepos.findAll({ include: { all: true } });
     return users;
   }
 }
