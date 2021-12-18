@@ -12,7 +12,20 @@ export class AuthService {
     private jwtService: JwtService
   ) {}
 
-  async signin(userDto: CreateUserDto) {}
+  async signin(userDto: CreateUserDto) {
+    const user = await this.validUser(userDto);
+    return this.Token(user);
+  }
+
+  private async validUser(userDto: CreateUserDto) {
+    const user = await this.userService.getEmail(userDto.email);
+    const confirmPassword = await bcrypt.compare(
+      userDto.password,
+      user.password
+    );
+    if() {}
+    return user;
+  }
 
   async signup(userDto: CreateUserDto) {
     const person = await this.userService.getEmail(userDto.email);
@@ -27,7 +40,7 @@ export class AuthService {
     return this.Token(user);
   }
 
-  async Token(user: User) {
+  private async Token(user: User) {
     const payload = { email: user.email, id: user.id, role: user.role };
     return { token: this.jwtService.sign(payload) };
   }
