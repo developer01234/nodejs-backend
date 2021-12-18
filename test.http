@@ -1,6 +1,6 @@
 # I use VS CODE extensions Rest Client
 
-#GET http://localhost:5000/users
+GET http://localhost:5000/users
 #Content-Type: application/json
 
 #{
@@ -18,12 +18,12 @@
 #}
 
 # POST http://localhost:5000/auth/signup
-POST http://localhost:5000/auth/signin
-Content-Type: application/json
+#POST http://localhost:5000/auth/signin
+#Content-Type: application/json
 
-{
-	"email": "example12345678@example.com",
-	"password": "12345"
-}
+#{
+#	"email": "example12345678@example.com",
+#	"password": "12345"
+#}
 
 # eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGUxMjM0NTY3OEBleGFtcGxlLmNvbSIsImlkIjoxNCwicm9sZSI6W3siaWQiOjIsInZhbHVlIjoiVVNFUiIsImNyZWF0ZWRBdCI6IjIwMjEtMTItMThUMTA6MzQ6MTQuMTE2WiIsInVwZGF0ZWRBdCI6IjIwMjEtMTItMThUMTA6MzQ6MTQuMTE2WiJ9XSwiaWF0IjoxNjM5ODU0NTgzLCJleHAiOjE2NDAyMTQ1ODN9.duKmY_XWMI5cCKBGoZ8alrtwBfI79IoXLcuIhEhpUik
