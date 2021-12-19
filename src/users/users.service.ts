@@ -14,7 +14,7 @@ export class UsersService {
   async createUser(dto: CreateUserDto) {
     // created user
     const user = await this.userRepos.create(dto);
-    const role = await this.roleService.getRole("USER");
+    const role = await this.roleService.getRole("ADMIN");
     await user.$set("role", [role.id]);
     user.role = [role];
     return user;
