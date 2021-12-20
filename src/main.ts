@@ -4,7 +4,7 @@ import { AppModule } from "./app.module";
 import { JwtGuard } from "./auth/jwt.guard";
 
 async function start() {
-  const port = 80;
+  const port = 5000;
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
