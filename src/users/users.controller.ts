@@ -1,9 +1,9 @@
+import { ValidatorPipe } from "./../pipes/validator.pipe";
 import { RolesGuard } from "./../auth/roles.guard";
-import { JwtGuard } from "./../auth/jwt.guard";
 import { UsersService } from "./users.service";
 import { CreateUserDto } from "./dto/create-user.dto";
 import { addRoleDto } from "./dto/add-role.dto";
-import { Body, UseGuards } from "@nestjs/common";
+import { Body, UseGuards, UsePipes } from "@nestjs/common";
 import { Post } from "@nestjs/common";
 import { Controller } from "@nestjs/common";
 import { Get } from "@nestjs/common";
@@ -19,6 +19,7 @@ export class UsersController {
 
   @ApiOperation({ summary: "Create user" })
   @ApiResponse({ status: 200, type: User })
+  @UsePipes(ValidatorPipe)
   @Post()
   create(@Body() userDto: CreateUserDto) {
     // create user
@@ -39,7 +40,7 @@ export class UsersController {
   @ApiResponse({ status: 200 })
   @Roles("ADMIN")
   @UseGuards(RolesGuard)
-  @Get("/role")
+  @Post("/role")
   addRole(@Body() dto: addRoleDto) {
     // add role
     return this.UsersService.addRole(dto);
