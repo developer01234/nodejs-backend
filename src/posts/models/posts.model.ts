@@ -11,6 +11,8 @@ import { User } from "../../users/models/users.model";
 interface PostsCreationAttrs {
   title: string;
   content: string;
+  userId: number;
+  image: string;
 }
 
 // create table for DB
