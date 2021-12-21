@@ -1,5 +1,3 @@
-## schema DB
-
 ## Installation
 
 ```bash

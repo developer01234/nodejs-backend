@@ -1,8 +1,10 @@
+import { Posts } from "./../../posts/models/posts.model";
 import { ApiProperty } from "@nestjs/swagger";
 import {
   BelongsToMany,
   Column,
   DataType,
+  HasMany,
   Model,
   Table,
 } from "sequelize-typescript";
@@ -40,4 +42,7 @@ export class User extends Model<User, UserCreationAttrs> {
 
   @BelongsToMany(() => Role, () => UserRoles)
   role: Role[];
+
+  @HasMany(() => Posts)
+  posts: Posts[];
 }
