@@ -44,5 +44,5 @@ $ npm run test:cov
 ---
 ## License
 
-[GPL licensed](LICENSE).
+[Licensed](LICENSE).
 ---
