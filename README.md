@@ -7,8 +7,8 @@
 ## Stack
 
   <a href="https://www.typescriptlang.org/"><img src="https://img.icons8.com/color/50/000000/typescript.png"/></a>
-  <a href="https://www.typescriptlang.org/"><img style="width: 48px;" src="shield.png"/></a>
-  <a href="#"><img src="https://img.icons8.com/color/48/000000/docker.png"/></a>
+  <a href="https://nestjs.com/"><img style="width: 48px;" src="shield.png"/></a>
+  <a href="https://www.docker.com/"><img src="https://img.icons8.com/color/48/000000/docker.png"/></a>
 
 ---
 ## Installation
