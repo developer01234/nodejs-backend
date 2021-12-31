@@ -42,4 +42,4 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 ---
-## [License](LICENSE).
+## [CC0 License](LICENSE).
