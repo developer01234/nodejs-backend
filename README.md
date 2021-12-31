@@ -11,14 +11,11 @@
   - ![Docker](https://img.shields.io/badge/-Docker-46a2f1?style=flat-square&logo=docker&logoColor=white)
 
 ---
-
 ## Installation
-
 ```bash
 $ npm install
 ```
 ---
-
 ## Running the app
 
 ```bash
@@ -30,7 +27,6 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 ---
-
 ## Test
 
 ```bash
@@ -47,4 +43,8 @@ $ npm run test:cov
 Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ---
-## [CC0 License](LICENSE).
+## License
+
+[CC0 License](LICENSE).
+
+---
