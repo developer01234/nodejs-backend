@@ -42,4 +42,9 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 ---
+## Contributing
+
+Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+---
 ## [CC0 License](LICENSE).
