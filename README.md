@@ -40,7 +40,7 @@ $ npm run test:cov
 ## Authors
 
 * **[Ruslan Shvetsov](https://github.com/developer01234)**
-* See also the list of [contributors](https://github.com/developer01234/bug-free-lamp/graphs/contributors) who participated in this project.
+* See also the list of **[contributors](https://github.com/developer01234/bug-free-lamp/graphs/contributors)** who participated in this project.
 
 ## Contributing
 
