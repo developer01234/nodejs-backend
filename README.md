@@ -1,4 +1,4 @@
-# The bug free lamp sample.
+# nodejs backend.
 
 > Please star this repo if you like ⭐ <br>
 > It's motivates me a lot!
